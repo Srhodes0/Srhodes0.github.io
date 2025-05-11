@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Nunito&display=swap" rel="stylesheet">
+  <title>Order a Cheesecake</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><h1>Order Form</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="flavors.html">Flavors</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- Form w/ required elements -->
+    <form>
+      <fieldset>
+        <legend>Customer Information</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required maxlength="50">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+
+        <label for="delivery">Delivery Date:</label>
+        <input type="date" id="delivery" required>
+
+        <label for="quantity">Quantity (1-10):</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="10">
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose Your Cheesecake</legend>
+        <label for="flavor">Flavor:</label>
+        <select id="flavor" name="flavor">
+          <option value="classic">Classic New York</option>
+          <option value="strawberry">Strawberry Swirl</option>
+          <option value="oreo">Oreo Crunch</option>
+        </select>
+
+        <label for="size">Size:</label>
+        <input list="sizes" id="size" name="size">
+        <datalist id="sizes">
+          <option value="6-inch">
+          <option value="9-inch">
+          <option value="Party Tray">
+        </datalist>
+
+        <label><input type="checkbox" name="extras" value="fruit"> Add Fresh Fruit</label>
+        <label><input type="checkbox" name="extras" value="whipped"> Add Whipped Cream</label>
+
+        <label for="satisfaction">Satisfaction (1-10):</label>
+        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10">
+      </fieldset>
+
+      <fieldset>
+        <legend>Additional Notes</legend>
+        <label for="notes">Special Instructions:</label>
+        <textarea id="notes" name="notes" rows="4"></textarea>
+      </fieldset>
+
+      <button type="submit">Submit Order</button>
+      <button type="reset">Cancel</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Fetish Gourmet Cheesecakes</p>
+  </footer>
+</body>
+</html>

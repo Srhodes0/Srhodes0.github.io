@@ -1,0 +1,145 @@
+
+/* Styling and background image */
+body {
+  position: relative;
+  background-color: #fff5f8;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/*Fetish logo background */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('Fetish.jpg') no-repeat center center scroll;
+  background-size: contain;
+  opacity: 0.08;
+  z-index: -1;
+}
+
+/* Header formatting */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(255, 64, 129, 0.8);
+  color: white;
+}
+
+/* Navigation formatting */
+nav ul {
+  list-style-type: none;
+  background-color: #ff80ab;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+/* Pseudo class for hover effect */
+nav a:hover {
+  background-color: #e91e63;
+  border-radius: 5px;
+}
+
+/* Main layout */
+main {
+  padding: 2rem;
+}
+
+/* Grid layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Grouping and formatting images with figure */
+figure {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  float: left; /* floated layout */
+  width: 60%;
+}
+
+/* overflow handling */
+figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Clear float */
+.grid-layout::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Form styling */
+form {
+  margin-top: 1rem;
+}
+
+/* Text, select, and button styling */
+label, select, input, button, textarea {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+/*Pseudo class for focus */
+input:focus, select:focus {
+  border: 2px solid #ff4081;
+}
+
+/* Buttons with pseudo class */
+button {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e91e63;
+}
+
+/* Footer */
+footer {
+  background-color: #ff4081;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+}
